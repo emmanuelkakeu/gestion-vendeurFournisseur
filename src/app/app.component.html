@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gas Retailers</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+  <h2>Welcome to {{title}}</h2>
+  <div class="container">
+    <h3>Gas Retailers</h3>
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">newfournisseur</i></a>
+
+    <div class="row">
+
+      <div *ngFor="let retailer of gasRetailers" class="col m4 s6 ">
+        <div class="card horizontal my-custom-card">
+
+            <div class="card-image">
+                <img [src]=retailer.imageFileName  />
+            </div>
+
+              <div class="card-stacked">
+                  <h5 class="card-title">{{ retailer.name }}</h5>
+                <p class="card-text">{{ retailer.address }}</p>
+                <p class="card-text">{{ retailer.contactDetails }}</p>
+                <p class="card-text">{{ retailer.openingHours }}</p>
+
+                <a class="waves-effect waves-light btn">Details</a>
+
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Materialize JavaScript (facultatif) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
